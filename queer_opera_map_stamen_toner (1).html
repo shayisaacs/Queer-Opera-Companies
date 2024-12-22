@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b2c176464a76fc6b138a9577760f4a8f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b2c176464a76fc6b138a9577760f4a8f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b2c176464a76fc6b138a9577760f4a8f = L.map(
+                "map_b2c176464a76fc6b138a9577760f4a8f",
+                {
+                    center: [48.5, -95.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_901a0dd0062e0157b13b8be2845c6b73 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_b2c176464a76fc6b138a9577760f4a8f);
+        
+    
+            var marker_cluster_b6421a01e41be3e13f2e7aaff90bba98 = L.markerClusterGroup(
+                {}
+            );
+            map_b2c176464a76fc6b138a9577760f4a8f.addLayer(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var marker_c18101aaba098dc24639485d081e6068 = L.marker(
+                [43.6532, -79.3832],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_cde2366eecd61a29028be1d885855904 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_c18101aaba098dc24639485d081e6068.setIcon(icon_cde2366eecd61a29028be1d885855904);
+        
+    
+        var popup_bc77f3875c7e6895088377c116c0b5d1 = L.popup({"maxWidth": 300});
+
+        
+            var html_ecc1e0b64899c9637b8487e20ad11750 = $(`<div id="html_ecc1e0b64899c9637b8487e20ad11750" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         OperaQ     </div>     <div style="font-size:14px;">         Queer-focused opera company in Toronto, amplifying queer and trans voices.<br>         <a href='https://www.operaqto.com' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_bc77f3875c7e6895088377c116c0b5d1.setContent(html_ecc1e0b64899c9637b8487e20ad11750);
+        
+
+        marker_c18101aaba098dc24639485d081e6068.bindPopup(popup_bc77f3875c7e6895088377c116c0b5d1)
+        ;
+
+        
+    
+    
+            var marker_d36660d446d36da14bfd85129f687b53 = L.marker(
+                [49.2827, -123.1207],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_ec3525df5110684cb675c3f8ddd913b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_d36660d446d36da14bfd85129f687b53.setIcon(icon_ec3525df5110684cb675c3f8ddd913b1);
+        
+    
+        var popup_904e5a20e6ef4bcc731966bc200ecf9a = L.popup({"maxWidth": 300});
+
+        
+            var html_f2c263260ab42a58b77701ae80c76446 = $(`<div id="html_f2c263260ab42a58b77701ae80c76446" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         Frank Theatre Company     </div>     <div style="font-size:14px;">         Focuses on queer and sex-positive arts in Vancouver.<br>         <a href='https://franktheatre.com' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_904e5a20e6ef4bcc731966bc200ecf9a.setContent(html_f2c263260ab42a58b77701ae80c76446);
+        
+
+        marker_d36660d446d36da14bfd85129f687b53.bindPopup(popup_904e5a20e6ef4bcc731966bc200ecf9a)
+        ;
+
+        
+    
+    
+            var marker_7d0fe3ecdf3d86c87aa4aeeb1efaa018 = L.marker(
+                [43.7001, -79.4163],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_d9babd19e1435a597d9236e47189486f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_7d0fe3ecdf3d86c87aa4aeeb1efaa018.setIcon(icon_d9babd19e1435a597d9236e47189486f);
+        
+    
+        var popup_7905ace321a4f3bb9d8c5032de7fcb19 = L.popup({"maxWidth": 300});
+
+        
+            var html_e680d70eb8954798bc1ce3fcf3f8766f = $(`<div id="html_e680d70eb8954798bc1ce3fcf3f8766f" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         Essential Opera     </div>     <div style="font-size:14px;">         Canadian opera company featuring innovative and inclusive performances.<br>         <a href='https://essentialopera.com' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_7905ace321a4f3bb9d8c5032de7fcb19.setContent(html_e680d70eb8954798bc1ce3fcf3f8766f);
+        
+
+        marker_7d0fe3ecdf3d86c87aa4aeeb1efaa018.bindPopup(popup_7905ace321a4f3bb9d8c5032de7fcb19)
+        ;
+
+        
+    
+    
+            var marker_5ab5e3b827d0423befa80501b9a2fa48 = L.marker(
+                [45.5122, -122.6587],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_b0fa2356e9ec9c4101056ddf23acccc5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_5ab5e3b827d0423befa80501b9a2fa48.setIcon(icon_b0fa2356e9ec9c4101056ddf23acccc5);
+        
+    
+        var popup_65a1b86d2ebfce93a0ced45e744f2354 = L.popup({"maxWidth": 300});
+
+        
+            var html_c3b79a1ec44ba35f60478667cb6b297a = $(`<div id="html_c3b79a1ec44ba35f60478667cb6b297a" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         Queer Opera     </div>     <div style="font-size:14px;">         Safe stage for LGBTQIA+ singers in Portland.<br>         <a href='https://www.queeropera.org' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_65a1b86d2ebfce93a0ced45e744f2354.setContent(html_c3b79a1ec44ba35f60478667cb6b297a);
+        
+
+        marker_5ab5e3b827d0423befa80501b9a2fa48.bindPopup(popup_65a1b86d2ebfce93a0ced45e744f2354)
+        ;
+
+        
+    
+    
+            var marker_a9373b4e8209dcdce4a580f50a4476c2 = L.marker(
+                [41.8781, -87.6298],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_4a10028cadd0fe7362932fb9aeda4cc7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_a9373b4e8209dcdce4a580f50a4476c2.setIcon(icon_4a10028cadd0fe7362932fb9aeda4cc7);
+        
+    
+        var popup_a380baa51f65045ea83f87c3c6c5e2e1 = L.popup({"maxWidth": 300});
+
+        
+            var html_30699d2fc938e96eff30faccedecfc1e = $(`<div id="html_30699d2fc938e96eff30faccedecfc1e" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         Thompson Street Opera Company     </div>     <div style="font-size:14px;">         Chicago-based queer- and trans-led company.<br>         <a href='https://www.thompsonstreetopera.org' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_a380baa51f65045ea83f87c3c6c5e2e1.setContent(html_30699d2fc938e96eff30faccedecfc1e);
+        
+
+        marker_a9373b4e8209dcdce4a580f50a4476c2.bindPopup(popup_a380baa51f65045ea83f87c3c6c5e2e1)
+        ;
+
+        
+    
+    
+            var marker_42ac11eea167d056332455afb88a7ebd = L.marker(
+                [44.9778, -93.265],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_22e45f658264aa3cb53d0bc295e147d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_42ac11eea167d056332455afb88a7ebd.setIcon(icon_22e45f658264aa3cb53d0bc295e147d6);
+        
+    
+        var popup_6fca52c0d59a23113ef1e667cc253189 = L.popup({"maxWidth": 300});
+
+        
+            var html_61ccb3d6d2e04e8664b43e3d54e99c03 = $(`<div id="html_61ccb3d6d2e04e8664b43e3d54e99c03" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         Journey North Opera Company     </div>     <div style="font-size:14px;">         Modernizes opera conventions in Minnesota.<br>         <a href='https://www.journeynorthopera.com' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_6fca52c0d59a23113ef1e667cc253189.setContent(html_61ccb3d6d2e04e8664b43e3d54e99c03);
+        
+
+        marker_42ac11eea167d056332455afb88a7ebd.bindPopup(popup_6fca52c0d59a23113ef1e667cc253189)
+        ;
+
+        
+    
+    
+            var marker_818f9c09d0726690b3898991ab4feaea = L.marker(
+                [47.6062, -122.3321],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_bb1c36ab8025496f25f3b5ecd7c72368 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_818f9c09d0726690b3898991ab4feaea.setIcon(icon_bb1c36ab8025496f25f3b5ecd7c72368);
+        
+    
+        var popup_75d0f8b75b92da7593564eeb2a86c403 = L.popup({"maxWidth": 300});
+
+        
+            var html_14d512d86f6df74eefac018812020ddf = $(`<div id="html_14d512d86f6df74eefac018812020ddf" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         Lowbrow Opera Collective     </div>     <div style="font-size:14px;">         Contemporary queer-themed operas in Seattle.<br>         <a href='https://lowbrowoc.org' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_75d0f8b75b92da7593564eeb2a86c403.setContent(html_14d512d86f6df74eefac018812020ddf);
+        
+
+        marker_818f9c09d0726690b3898991ab4feaea.bindPopup(popup_75d0f8b75b92da7593564eeb2a86c403)
+        ;
+
+        
+    
+    
+            var marker_6599406f0b5f184477f3ecc9f05d5c81 = L.marker(
+                [40.7128, -74.006],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_c842999b6540cc18cfacb98707e351ab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_6599406f0b5f184477f3ecc9f05d5c81.setIcon(icon_c842999b6540cc18cfacb98707e351ab);
+        
+    
+        var popup_5d4c8fad03aa31fa3ff7e83a2b6ab6ac = L.popup({"maxWidth": 300});
+
+        
+            var html_79ff1ffcc431f664c217249b3b6e0591 = $(`<div id="html_79ff1ffcc431f664c217249b3b6e0591" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         New York City Opera     </div>     <div style="font-size:14px;">         Featured 'Stonewall' and other LGBTQIA+ operas.<br>         <a href='https://nycopera.com' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_5d4c8fad03aa31fa3ff7e83a2b6ab6ac.setContent(html_79ff1ffcc431f664c217249b3b6e0591);
+        
+
+        marker_6599406f0b5f184477f3ecc9f05d5c81.bindPopup(popup_5d4c8fad03aa31fa3ff7e83a2b6ab6ac)
+        ;
+
+        
+    
+    
+            var marker_8b16f2f79d773af42c50569ac79cc000 = L.marker(
+                [40.6782, -73.9442],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_9ed095d998a273a7b82b7083abd7f848 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_8b16f2f79d773af42c50569ac79cc000.setIcon(icon_9ed095d998a273a7b82b7083abd7f848);
+        
+    
+        var popup_a47fc31f181fbd0680faa6a688c34571 = L.popup({"maxWidth": 300});
+
+        
+            var html_09794c3b6987dbdaea5dbbd2a31f9a0f = $(`<div id="html_09794c3b6987dbdaea5dbbd2a31f9a0f" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         American Opera Projects     </div>     <div style="font-size:14px;">         Developed 'Patience & Sarah' in Brooklyn.<br>         <a href='https://www.aopopera.org' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_a47fc31f181fbd0680faa6a688c34571.setContent(html_09794c3b6987dbdaea5dbbd2a31f9a0f);
+        
+
+        marker_8b16f2f79d773af42c50569ac79cc000.bindPopup(popup_a47fc31f181fbd0680faa6a688c34571)
+        ;
+
+        
+    
+    
+            var marker_d09291439b508e96cae711e69221b5c7 = L.marker(
+                [34.0522, -118.2437],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_786994a70a66e3b1d8f8d993937f5729 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_d09291439b508e96cae711e69221b5c7.setIcon(icon_786994a70a66e3b1d8f8d993937f5729);
+        
+    
+        var popup_041f835fdb08bf84271defc0f4ff5763 = L.popup({"maxWidth": 300});
+
+        
+            var html_bed1f0c6acafa28ac76830f0a5159dd6 = $(`<div id="html_bed1f0c6acafa28ac76830f0a5159dd6" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         LA Opera     </div>     <div style="font-size:14px;">         Highlights LGBTQIA+ composers in Los Angeles. Notable productions include 'Crossing' by Matthew Aucoin and 'As One' by Laura Kaminsky, exploring trans and queer identities.<br>         <a href='https://www.laopera.org' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_041f835fdb08bf84271defc0f4ff5763.setContent(html_bed1f0c6acafa28ac76830f0a5159dd6);
+        
+
+        marker_d09291439b508e96cae711e69221b5c7.bindPopup(popup_041f835fdb08bf84271defc0f4ff5763)
+        ;
+
+        
+    
+    
+            var marker_1e66b30885f4c7f521a17e3fd9f6b645 = L.marker(
+                [37.7749, -122.4194],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_4ddc6eafb536720f7dfb6ea8a7dfd8d5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_1e66b30885f4c7f521a17e3fd9f6b645.setIcon(icon_4ddc6eafb536720f7dfb6ea8a7dfd8d5);
+        
+    
+        var popup_089c5a45c131011300f4259720bf3e6a = L.popup({"maxWidth": 300});
+
+        
+            var html_eb8fdf376d88fc6e40dbd5ee1b029374 = $(`<div id="html_eb8fdf376d88fc6e40dbd5ee1b029374" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         San Francisco Opera     </div>     <div style="font-size:14px;">         Inclusive programming featuring queer stories.<br>         <a href='https://www.sfopera.com' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_089c5a45c131011300f4259720bf3e6a.setContent(html_eb8fdf376d88fc6e40dbd5ee1b029374);
+        
+
+        marker_1e66b30885f4c7f521a17e3fd9f6b645.bindPopup(popup_089c5a45c131011300f4259720bf3e6a)
+        ;
+
+        
+    
+    
+            var marker_91d8c4eb69eeace844bb99f7a004d0bd = L.marker(
+                [37.7749, -122.4194],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_7df5886a37318bf1bd1e267bcdbac326 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_91d8c4eb69eeace844bb99f7a004d0bd.setIcon(icon_7df5886a37318bf1bd1e267bcdbac326);
+        
+    
+        var popup_0451cbdbf05a40cbde8ca19e2423e25a = L.popup({"maxWidth": 300});
+
+        
+            var html_4ceec7fd8f8b3224f30c338f9f00de8b = $(`<div id="html_4ceec7fd8f8b3224f30c338f9f00de8b" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         Opera Parallèle     </div>     <div style="font-size:14px;">         Experimental operas featuring queer narratives.<br>         <a href='https://www.operaparallele.org' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_0451cbdbf05a40cbde8ca19e2423e25a.setContent(html_4ceec7fd8f8b3224f30c338f9f00de8b);
+        
+
+        marker_91d8c4eb69eeace844bb99f7a004d0bd.bindPopup(popup_0451cbdbf05a40cbde8ca19e2423e25a)
+        ;
+
+        
+    
+    
+            var marker_693d78de43201adc451b65d21f529ff7 = L.marker(
+                [33.7701, -118.1937],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_d0df3193eebc6bbbfb4349e177713fe3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_693d78de43201adc451b65d21f529ff7.setIcon(icon_d0df3193eebc6bbbfb4349e177713fe3);
+        
+    
+        var popup_04c8eb85233e7e3c97a845d5e6c372e6 = L.popup({"maxWidth": 300});
+
+        
+            var html_1debb5b0b8448c671de6954ae66da5c6 = $(`<div id="html_1debb5b0b8448c671de6954ae66da5c6" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         Long Beach Opera     </div>     <div style="font-size:14px;">         Socially relevant operas with LGBTQ+ themes.<br>         <a href='https://www.longbeachopera.org' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_04c8eb85233e7e3c97a845d5e6c372e6.setContent(html_1debb5b0b8448c671de6954ae66da5c6);
+        
+
+        marker_693d78de43201adc451b65d21f529ff7.bindPopup(popup_04c8eb85233e7e3c97a845d5e6c372e6)
+        ;
+
+        
+    
+    
+            var marker_dd494959a3f3b11d544367980a1be89c = L.marker(
+                [47.6062, -122.3321],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_ad9b3d99d2a1eba37dfeeb6e4cd9907b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_dd494959a3f3b11d544367980a1be89c.setIcon(icon_ad9b3d99d2a1eba37dfeeb6e4cd9907b);
+        
+    
+        var popup_bd463f1e554fad4a3db33ae4cfdd076f = L.popup({"maxWidth": 300});
+
+        
+            var html_34e85d484834d38f6f32d2e458ca25cb = $(`<div id="html_34e85d484834d38f6f32d2e458ca25cb" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         Seattle Opera     </div>     <div style="font-size:14px;">         Explores LGBTQIA+ themes in Seattle.<br>         <a href='https://www.seattleopera.org' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_bd463f1e554fad4a3db33ae4cfdd076f.setContent(html_34e85d484834d38f6f32d2e458ca25cb);
+        
+
+        marker_dd494959a3f3b11d544367980a1be89c.bindPopup(popup_bd463f1e554fad4a3db33ae4cfdd076f)
+        ;
+
+        
+    
+    
+            var marker_7dda1131ae685c0200f26260b77f54ab = L.marker(
+                [29.7604, -95.3698],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_5a4ff5d1f0c9dad3393f51c7d7812ef8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_7dda1131ae685c0200f26260b77f54ab.setIcon(icon_5a4ff5d1f0c9dad3393f51c7d7812ef8);
+        
+    
+        var popup_d1b4f6bcd093cf664e0264d3959fe0b8 = L.popup({"maxWidth": 300});
+
+        
+            var html_8b258890d26b1f6a00e24d89dc0bc2ea = $(`<div id="html_8b258890d26b1f6a00e24d89dc0bc2ea" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         Houston Grand Opera     </div>     <div style="font-size:14px;">         Features LGBTQIA+ artists and composers.<br>         <a href='https://www.houstongrandopera.org' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_d1b4f6bcd093cf664e0264d3959fe0b8.setContent(html_8b258890d26b1f6a00e24d89dc0bc2ea);
+        
+
+        marker_7dda1131ae685c0200f26260b77f54ab.bindPopup(popup_d1b4f6bcd093cf664e0264d3959fe0b8)
+        ;
+
+        
+    
+    
+            var marker_d90b51ae47e05deb10fe9f0415aaed14 = L.marker(
+                [42.3601, -71.0589],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_4496dac46c79aee1194e7822c4e79512 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_d90b51ae47e05deb10fe9f0415aaed14.setIcon(icon_4496dac46c79aee1194e7822c4e79512);
+        
+    
+        var popup_cc1de41ffbc2a0216c9e96e404a19fef = L.popup({"maxWidth": 300});
+
+        
+            var html_92cc23ac26eb292ac820f58619062112 = $(`<div id="html_92cc23ac26eb292ac820f58619062112" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         Boston Lyric Opera     </div>     <div style="font-size:14px;">         Showcases LGBTQIA+ programming in Boston.<br>         <a href='https://blo.org' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_cc1de41ffbc2a0216c9e96e404a19fef.setContent(html_92cc23ac26eb292ac820f58619062112);
+        
+
+        marker_d90b51ae47e05deb10fe9f0415aaed14.bindPopup(popup_cc1de41ffbc2a0216c9e96e404a19fef)
+        ;
+
+        
+    
+    
+            var marker_e5bd1b6fce9c88e8ac7e2382862b48f1 = L.marker(
+                [42.7038, -74.9243],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_828253003f71d1cd1b83c59bea139359 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e5bd1b6fce9c88e8ac7e2382862b48f1.setIcon(icon_828253003f71d1cd1b83c59bea139359);
+        
+    
+        var popup_9995dc766a0b5e9a65b8c291e9b39ff8 = L.popup({"maxWidth": 300});
+
+        
+            var html_a9b2987b8702377f5ac86422867eab24 = $(`<div id="html_a9b2987b8702377f5ac86422867eab24" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         Glimmerglass Festival     </div>     <div style="font-size:14px;">         Highlights queer composers and stories.<br>         <a href='https://glimmerglass.org' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_9995dc766a0b5e9a65b8c291e9b39ff8.setContent(html_a9b2987b8702377f5ac86422867eab24);
+        
+
+        marker_e5bd1b6fce9c88e8ac7e2382862b48f1.bindPopup(popup_9995dc766a0b5e9a65b8c291e9b39ff8)
+        ;
+
+        
+    
+    
+            var marker_90d313349b034d723081978dc4c7faf7 = L.marker(
+                [35.687, -105.9378],
+                {}
+            ).addTo(marker_cluster_b6421a01e41be3e13f2e7aaff90bba98);
+        
+    
+            var icon_9cb18a7730cc93bad0de379659934e8c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_90d313349b034d723081978dc4c7faf7.setIcon(icon_9cb18a7730cc93bad0de379659934e8c);
+        
+    
+        var popup_6feab7ee22e13df1d562e40df0314432 = L.popup({"maxWidth": 300});
+
+        
+            var html_2d95f5f1392dcdde5c5ae3f5a9a9593f = $(`<div id="html_2d95f5f1392dcdde5c5ae3f5a9a9593f" style="width: 100.0%; height: 100.0%;">     <div style="font-size:16px; font-weight:bold;">         Santa Fe Opera     </div>     <div style="font-size:14px;">         Premieres LGBTQIA+-focused operas in New Mexico.<br>         <a href='https://www.santafeopera.org' target='_blank'>Visit Website</a>     </div>     </div>`)[0];
+            popup_6feab7ee22e13df1d562e40df0314432.setContent(html_2d95f5f1392dcdde5c5ae3f5a9a9593f);
+        
+
+        marker_90d313349b034d723081978dc4c7faf7.bindPopup(popup_6feab7ee22e13df1d562e40df0314432)
+        ;
+
+        
+    
+</script>
+</html>
